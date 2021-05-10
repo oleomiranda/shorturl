@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 
 app.post("/create", async (req, res) => {
 
-    var pattern = /javascript*./i
+    var pattern = /(javascript.*(:)).*/gi
     var fullurl = req.body.fullUrl
 
     if(fullurl.match(pattern)){ //IF PARA PREVINIR XSS 
